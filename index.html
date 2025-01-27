@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Ministerios Musicales</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="themeToggleContainer" class="center">
+    <button id="themeToggleBtn" class="btn-3d">Cambiar Modo</button>
+    <div class="icon-container">
+      🎵 <!-- Símbolo musical como adorno -->
+    </div>
+  </div>
+
+  <!-- Sección de Login -->
+  <div id="adminLogin" class="center">
+    <h2>Ingreso Administrador</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit" class="btn-3d">Iniciar sesión</button>
+    </form>
+    <hr>
+    <h3>Para los músicos</h3>
+    <p>Consulta tu participación ingresando la fecha:</p>
+    <input type="date" id="searchDateGuest" class="center">
+    <button onclick="searchParticipationGuest()" class="btn-3d">Buscar Participación</button>
+    <div id="ministriesListGuest"></div>
+  </div>
+
+  <!-- Sección del Administrador -->
+  <div id="appContainer" style="display: none;" class="center">
+    <header>
+      <h1>Gestión de Ministerios</h1>
+      <div class="icon-container">
+        🎵
+      </div>
+      <button id="logoutBtn" class="btn-3d">Cerrar sesión</button>
+    </header>
+    <main>
+      <div id="adminSection">
+        <h2>Ingreso de Participaciones</h2>
+        <form id="ministerForm">
+          <input type="text" id="ministerName" placeholder="Nombre del ministro" required>
+          <input type="text" id="supportMinisters" placeholder="Ministros de apoyo (separados por comas)" required>
+          <input type="date" id="serviceDate" required>
+          <button type="submit" class="btn-3d">Agregar Participación</button>
+        </form>
+        <h2>Buscar Participaciones</h2>
+        <input type="date" id="searchDateAdmin">
+        <button onclick="searchParticipationAdmin()" class="btn-3d">Buscar</button>
+        <div id="ministriesListAdmin"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
