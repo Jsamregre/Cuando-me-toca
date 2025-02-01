@@ -1,0 +1,125 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background: url('trigo.jpg') no-repeat center center fixed; /* Fondo de trigo */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(59, 130, 246, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque ligero */
+}
+
+/* Secciones */
+.seccion {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Botones estilo gotas de agua */
+button {
+    background: rgba(255, 255, 255, 0.3); /* Transparente */
+    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px; /* Redondeado */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6), 
+                0 4px 6px rgba(0, 0, 0, 0.2); /* Reflejo */
+    backdrop-filter: blur(5px); /* Efecto cristal */
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8),
+                0 6px 10px rgba(0, 0, 0, 0.3); /* Más reflejo al pasar el mouse */
+}
+
+/* Formulario de login */
+#login input[type="text"],
+#login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login button {
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6),
+                0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+#login button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8),
+                0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Formularios de servicio */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6),
+                0 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+form button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.8),
+                0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Resultados de búsqueda */
+#resultadosBusqueda, #vistaPrevia {
+    margin-top: 15px;
+    background-color: rgba(224, 242, 254, 0.85);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #90cdf4;
+    backdrop-filter: blur(3px);
+}
+

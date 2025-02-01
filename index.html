@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organización de Servicios y Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Pantalla de Inicio -->
+    <div id="inicio" class="seccion">
+        <h1>Bienvenido</h1>
+        <button onclick="mostrarSeccion('login')">Administración</button>
+        <button onclick="mostrarSeccion('miembros')">Miembros</button>
+    </div>
+
+    <!-- Sección de Inicio de Sesión -->
+    <div id="login" class="seccion" style="display: none;">
+        <h2>Acceso de Administrador</h2>
+        <form id="formLogin">
+            <input type="text" id="usuario" placeholder="Usuario" required><br>
+            <input type="password" id="contrasena" placeholder="Contraseña" required><br>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="errorLogin" style="color: red; display: none;">Usuario o contraseña incorrectos.</p>
+        <button onclick="volverInicio()">Volver al Inicio</button>
+    </div>
+
+    <!-- Sección de Administración -->
+    <div id="admin" class="seccion" style="display: none;">
+        <h2>Panel de Administración</h2>
+
+        <!-- Formulario de Asignación de Servicios -->
+        <h3>Asignar Servicio</h3>
+        <form id="formularioServicio">
+            <label>Departamento:</label>
+            <select id="departamento">
+                <option value="Damas">Damas</option>
+                <option value="Caballeros">Caballeros</option>
+                <option value="Jóvenes">Jóvenes</option>
+                <option value="Demad">Demad</option>
+                <option value="Juveniles">Juveniles</option>
+            </select><br>
+
+            <label>Fecha:</label>
+            <input type="date" id="fecha" required><br>
+
+            <label>Ministro que Dirige:</label>
+            <input type="text" id="ministroDirige"><br>
+
+            <label>Ministro que Predica:</label>
+            <input type="text" id="ministroPredica"><br>
+
+            <button type="submit">Guardar Servicio</button>
+        </form>
+
+        <!-- Formulario para Agregar Eventos -->
+        <h3>Agregar Evento</h3>
+        <form id="formularioEvento">
+            <label>Fecha del Evento:</label>
+            <input type="date" id="fechaEvento" required><br>
+
+            <label>Descripción del Evento:</label>
+            <input type="text" id="descripcionEvento" placeholder="Ej. Aniversario, Concierto, etc."><br>
+
+            <button type="submit">Guardar Evento</button>
+        </form>
+
+        <!-- Vista Previa de Servicios y Eventos Asignados -->
+        <h3>Vista Previa de Servicios y Eventos Asignados</h3>
+        <div id="vistaPrevia"></div>
+
+        <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <!-- Sección para Miembros -->
+    <div id="miembros" class="seccion" style="display: none;">
+        <h2>Consulta de Servicios y Eventos</h2>
+        
+        <!-- Selector de Fecha -->
+        <label for="fechaBusqueda">Selecciona un día:</label>
+        <input type="date" id="fechaBusqueda" required>
+        <button onclick="buscarPorFecha()">Buscar</button>
+
+        <div id="resultadosBusqueda"></div>
+
+        <button onclick="volverInicio()">Volver al Inicio</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
